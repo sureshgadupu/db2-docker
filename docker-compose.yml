@@ -1,0 +1,12 @@
+version: '3'
+services:
+  db2server:
+    container_name: db2server
+    image: ibmcom/db2:11.5.7.0
+    environment:
+      - LICENSE=accept
+      - DB2INST1_PASSWORD=test
+      - DBNAME=testdb
+    ports:
+      - '50000:50000'   
+    privileged: true
